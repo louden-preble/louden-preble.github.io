@@ -11,13 +11,14 @@
         <h1>Latest Comics</h1>
         <div id="dropdown-container">
             <label for="feed-select">Jump to:</label>
-            <select id="feed-select" onchange="jumpToFeed()">
+            <select id="feed-select">
                 <option value="smbc">SMBC</option>
                 <option value="xkcd">XKCD</option>
                 <option value="buttersafe">Buttersafe</option>
                 <option value="pbf">PBF</option>
                 <option value="jsph">JSPH</option>
             </select>
+            <button id="go-button" onclick="jumpToFeed()">Go</button>
         </div>
         <div id="feed">
             <h2 id="smbc">SMBC</h2>
