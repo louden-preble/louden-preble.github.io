@@ -1,4 +1,3 @@
-// scripts.js
 const feeds = {
     smbc: "https://www.smbc-comics.com/comic/rss",
     xkcd: "https://xkcd.com/rss.xml",
@@ -15,7 +14,8 @@ async function fetchRSSFeed(url, feedId) {
     const items = xml.querySelectorAll("item");
     
     let html = '';
-    items.forEach(el => {
+    items.forEach((el, index) => {
+        if (index >= 3) return;  // Limit to 3 comics per feed
         const title = el.querySelector("title").textContent;
         const link = el.querySelector("link").textContent;
         const description = el.querySelector("description").textContent;
