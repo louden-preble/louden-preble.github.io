@@ -8,8 +8,33 @@
 </head>
 <body>
     <div id="rss-feed-container">
-        <h1>Latest News</h1>
-        <div id="feed"></div>
+        <h1>Latest Comics</h1>
+        <div id="dropdown-container">
+            <label for="feed-select">Jump to:</label>
+            <select id="feed-select" onchange="jumpToFeed()">
+                <option value="smbc">SMBC</option>
+                <option value="xkcd">XKCD</option>
+                <option value="buttersafe">Buttersafe</option>
+                <option value="pbf">PBF</option>
+                <option value="jsph">JSPH</option>
+            </select>
+        </div>
+        <div id="feed">
+            <h2 id="smbc">SMBC</h2>
+            <div id="smbc-feed"></div>
+
+            <h2 id="xkcd">XKCD</h2>
+            <div id="xkcd-feed"></div>
+
+            <h2 id="buttersafe">Buttersafe</h2>
+            <div id="buttersafe-feed"></div>
+
+            <h2 id="pbf">PBF</h2>
+            <div id="pbf-feed"></div>
+
+            <h2 id="jsph">JSPH</h2>
+            <div id="jsph-feed"></div>
+        </div>
     </div>
     <script src="scripts.js"></script>
 </body>
