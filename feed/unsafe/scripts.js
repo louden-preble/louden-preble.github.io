@@ -1,4 +1,12 @@
 // scripts.js
+const feedUrls = [
+    "https://www.smbc-comics.com/comic/rss",
+    "https://xkcd.com/rss.xml",
+    "http://feeds.feedburner.com/buttersafe",
+    "https://pbfcomics.com/comics/rss",
+    "https://www.jspowerhour.com/comics.rss"
+];
+
 async function fetchRSSFeed(url) {
     const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`);
     const data = await response.json();
@@ -20,7 +28,13 @@ async function fetchRSSFeed(url) {
         `;
     });
 
-    document.getElementById("feed").innerHTML = html;
+    document.getElementById("feed").innerHTML += html;
 }
 
-fetchRSSFeed("https://example.com/rss-feed.xml");
+async function loadFeeds() {
+    for (const url of feedUrls) {
+        await fetchRSSFeed(url);
+    }
+}
+
+loadFeeds();
