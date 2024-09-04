@@ -1,7 +1,6 @@
 const feeds = {
     smbc: "https://www.smbc-comics.com/comic/rss",
     xkcd: "https://xkcd.com/rss.xml",
-    buttersafe: "http://feeds.feedburner.com/buttersafe",
     jsph: "https://www.jspowerhour.com/comics.rss"
 };
 
