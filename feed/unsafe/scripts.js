@@ -1,7 +1,7 @@
 const feeds = {
     smbc: "https://www.smbc-comics.com/comic/rss",
     xkcd: "https://xkcd.com/rss.xml",
-    jsph: "https://www.jspowerhour.com/comics.rss"
+
 };
 
 async function fetchRSSFeed(url, feedId) {
